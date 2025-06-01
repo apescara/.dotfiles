@@ -1,0 +1,13 @@
+bat
+felixkratz/formulae/borders
+felixkratz/formulae/sketchybar
+fzf
+git
+gh
+hashicorp/tap/terraform
+htop
+ripgrep
+stow
+uv
+yarn
+th-ch/youtube-music/youtube-music
