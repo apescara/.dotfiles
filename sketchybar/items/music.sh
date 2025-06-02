@@ -21,7 +21,7 @@ music=(
   # label.width=130
   update_freq=10
   label.max_chars=40
-  scroll_texts=on
+  scroll_texts=off
   # --subscribe music mouse.entered
   # mouse.clicked
   # mouse.exited
