@@ -18,9 +18,11 @@ after-startup-command = [
 exec-on-workspace-change = [
     '/bin/bash',
     '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+    'sketchybar --trigger aerospace_workspace_change PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
     'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0',
 ]
+
+
 
 # Start AeroSpace at login
 start-at-login = true
@@ -206,10 +208,10 @@ up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
 
 [workspace-to-monitor-force-assignment]
-C = ['^omen by hp 35$', 'monitor.main', '^built-in retina display$']
-1 = ['^omen by hp 35$', '^built-in retina display$', 'monitor.main']
-2 = ['^omen by hp 35$', '^built-in retina display$', 'monitor.main']
-N = ['^omen by hp 35$', '^built-in retina display$', 'monitor.main']
+C = ['^omen by hp 35$', '^built-in retina display$']
+1 = ['^omen by hp 35$', '^built-in retina display$']
+2 = ['^omen by hp 35$', '^built-in retina display$']
+N = ['^omen by hp 35$', '^built-in retina display$']
 3 = ['^g27q-20$', '^arzopa$', '^built-in retina display$']
 4 = ['^g27q-20$', '^arzopa$', '^built-in retina display$']
 S = ['^g27q-20$', '^arzopa$', '^built-in retina display$']

@@ -1,50 +1,45 @@
 #!/bin/bash
 
-sketchybar --add event aerospace_workspace_change
+sketchybar --add item aerospace_mode left \
+  --subscribe aerospace_mode aerospace_mode_change \
+  --set aerospace_mode icon="" \
+  script="$CONFIG_DIR/plugins/aerospace_mode.sh" \
+  icon.color="$ACCENT_COLOR" \
+  icon.padding_left=4 \
+  drawing=off
 
-sketchybar --add item aerospace_dummy left \
-  --set aerospace_dummy display=0 \
-  script="$PLUGIN_DIR/spaces.sh" \
-  --subscribe aerospace_dummy aerospace_workspace_change
+for sid in $(aerospace list-workspaces --all); do
+  monitor=$(aerospace list-windows --workspace "$sid" --format "%{monitor-appkit-nsscreen-screens-id}")
 
-for m in $(aerospace list-monitors | awk '{print $1}'); do
-  for sid in $(aerospace list-workspaces --monitor $m); do
-    sketchybar --add space space.$sid left \
-      --set space.$sid space=$sid \
-      icon=$sid \
-      background.color=$TRANSPARENT \
-      label.color=$ACCENT_COLOR \
-      icon.color=$ACCENT_COLOR \
-      display=$m \
-      label.font="sketchybar-app-font:Regular:12.0" \
-      icon.font="SF Pro:Semibold:12.0" \
-      label.padding_right=10 \
-      label.y_offset=-1 \
-      click_script="$PLUGIN_DIR/space_click.sh $sid"
+  if [ -z "$monitor" ]; then
+    monitor="1"
+  fi
 
-    apps=$(aerospace list-windows --monitor "$m" --workspace "$sid" |
-      awk -F '|' '{gsub(/^ *| *$/, "", $2); if (!seen[$2]++) print $2}')
-
-    icon_strip=""
-    if [ "${apps}" != "" ]; then
-      while read -r app; do
-        icon_strip+=" $($PLUGIN_DIR/icons.sh "$app")"
-      done <<<"${apps}"
-    else
-      icon_strip=" —"
-    fi
-
-    sketchybar --set space.$sid label="$icon_strip"
-
-  done
-  
-  for empty_space in $(aerospace list-workspaces --monitor $m --empty); do
-    sketchybar --set space.$empty_space display=0
-  done
-  for focus in $(aerospace list-workspaces --focused); do
-    sketchybar --set space.$focus background.drawing=on \
-      background.color=$ACCENT_COLOR \
-      label.color=$ITEM_COLOR \
-      icon.color=$ITEM_COLOR
-  done
+  sketchybar --add item space."$sid" left \
+    --subscribe space."$sid" aerospace_workspace_change display_change system_woke mouse.entered mouse.exited \
+    --set space."$sid" \
+    display="$monitor" \
+    padding_right=0 \
+    icon="$sid" \
+    label.padding_right=7 \
+    icon.padding_left=7 \
+    icon.padding_right=4 \
+    background.drawing=on \
+    label.font="sketchybar-app-font:Regular:16.0" \
+    background.color="$ACCENT_COLOR" \
+    icon.color="$BACKGROUND" \
+    label.color="$BACKGROUND" \
+    background.corner_radius=5 \
+    background.height=25 \
+    label.drawing=on \
+    click_script="aerospace workspace $sid" \
+    script="$CONFIG_DIR/plugins/aerospace.sh $sid"
 done
+
+sketchybar --add item space_separator left \
+  --set space_separator icon="|" \
+  icon.color="$ACCENT_COLOR" \
+  icon.padding_left=4 \
+  icon.padding_right=7 \
+  label.drawing=off \
+  background.drawing=off

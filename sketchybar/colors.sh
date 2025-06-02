@@ -1,39 +1,60 @@
 #!/bin/bash
 
-export TRANSPARENT=0x00ffffff
+export WHITE=0xffffffff
 
-# -- Gray Scheme --
-export ITEM_COLOR=0xff000000
-export ACCENT_COLOR=0xffc3c6cb
+export TRANSPARENT=0x00000000
 
-# -- White Scheme --
-# export ITEM_COLOR=0xff000000
-# export ACCENT_COLOR=0xffffffff
+# -- Gruv Box --
+# export BAR_COLOR=0x70282828
+# export ITEM_BG_COLOR=0xff1d2021
+# export ACCENT_COLOR=0xffd79921
+# export BACKGROUND=0xff282828
 
 # -- Teal Scheme --
-# export ITEM_COLOR=0xff000000
+# export BAR_COLOR=0xff001f30
+# export ITEM_BG_COLOR=0xff003547
 # export ACCENT_COLOR=0xff2cf9ed
+# export BACKGROUND=$BAR_COLOR
+
+# -- Transparent Scheme --
+export BAR_COLOR=0x40000000
+export ITEM_BG_COLOR=0xff353c3f
+export ITEM_COLOR=0xff000000
+export ACCENT_COLOR=0xffffffff
+export BACKGROUND=0xff101314
 
 # -- Purple Scheme --
-# export ITEM_COLOR=0xff000000
+# export BAR_COLOR=0xff140c42
+# export ITEM_BG_COLOR=0xff2b1c84
 # export ACCENT_COLOR=0xffeb46f9
+# export BACKGROUND=$BAR_COLOR
 
 # -- Red Scheme ---
-# export ITEM_COLOR=0xff000000
+# export BAR_COLOR=0xff23090e
+# export ITEM_BG_COLOR=0xff591221
 # export ACCENT_COLOR=0xffff2453
+# export BACKGROUND=$BAR_COLOR
 
 # -- Blue Scheme ---
-# export ITEM_COLOR=0xff000000
+# export BAR_COLOR=0xff021254
+# export ITEM_BG_COLOR=0xff093aa8
 # export ACCENT_COLOR=0xff15bdf9
+# export BACKGROUND=$BAR_COLOR
 
 # -- Green Scheme --
-# export ITEM_COLOR=0xff000000
+# export BAR_COLOR=0xff003315
+# export ITEM_BG_COLOR=0xff008c39
 # export ACCENT_COLOR=0xff1dfca1
+# export BACKGROUND=$BAR_COLOR
 
 # -- Orange Scheme --
-# export ITEM_COLOR=0xffffffff
+# export BAR_COLOR=0xff381c02
+# export ITEM_BG_COLOR=0xff99440a
 # export ACCENT_COLOR=0xfff97716
+# export BACKGROUND=$BAR_COLOR
 
 # -- Yellow Scheme --
-# export ITEM_COLOR=0xff000000
+# export BAR_COLOR=0xff2d2b02
+# export ITEM_BG_COLOR=0xff8e7e0a
 # export ACCENT_COLOR=0xfff7fc17
+# export BACKGROUND=$BAR_COLOR
