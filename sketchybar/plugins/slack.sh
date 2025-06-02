@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 STATUS_LABEL=$(lsappinfo info -only StatusLabel "Slack")
-ICON="$("$CONFIG_DIR/plugins/icon_map_fn.sh" "$INFO")"
+ICON="Slack"
 if [[ $STATUS_LABEL =~ \"label\"=\"([^\"]*)\" ]]; then
     LABEL="${BASH_REMATCH[1]}"
 

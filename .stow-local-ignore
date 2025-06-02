@@ -2,4 +2,6 @@
 .gitignore
 .stowrc
 .DS_Store
+Brewfile
+setup.sh
 README.*

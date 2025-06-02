@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -12,19 +14,19 @@ stow .
 
 # Chmod Sketchybar plugins
 chmod +x $HOME/.config/sketchybar/icon_map.sh
-chmod +x $HOME/.config/sketchybar/pluings/aerospace_mode.sh
-chmod +x $HOME/.config/sketchybar/pluings/aerospace_mode.sh
-chmod +x $HOME/.config/sketchybar/pluings/aerospace.sh
-chmod +x $HOME/.config/sketchybar/pluings/battery.sh
-chmod +x $HOME/.config/sketchybar/pluings/calendar.sh
-chmod +x $HOME/.config/sketchybar/pluings/cpu.sh
-chmod +x $HOME/.config/sketchybar/pluings/front_app.sh
-chmod +x $HOME/.config/sketchybar/pluings/icons.sh
-chmod +x $HOME/.config/sketchybar/pluings/memory.sh
-chmod +x $HOME/.config/sketchybar/pluings/slack.sh
-chmod +x $HOME/.config/sketchybar/pluings/volume.sh
-chmod +x $HOME/.config/sketchybar/pluings/wifi.sh
-chmod +x $HOME/.config/sketchybar/pluings/youtube-music.sh
+chmod +x $HOME/.config/sketchybar/plugins/aerospace_mode.sh
+chmod +x $HOME/.config/sketchybar/plugins/aerospace_mode.sh
+chmod +x $HOME/.config/sketchybar/plugins/aerospace.sh
+chmod +x $HOME/.config/sketchybar/plugins/battery.sh
+chmod +x $HOME/.config/sketchybar/plugins/calendar.sh
+chmod +x $HOME/.config/sketchybar/plugins/cpu.sh
+chmod +x $HOME/.config/sketchybar/plugins/front_app.sh
+chmod +x $HOME/.config/sketchybar/plugins/icons.sh
+chmod +x $HOME/.config/sketchybar/plugins/memory.sh
+chmod +x $HOME/.config/sketchybar/plugins/slack.sh
+chmod +x $HOME/.config/sketchybar/plugins/volume.sh
+chmod +x $HOME/.config/sketchybar/plugins/wifi.sh
+chmod +x $HOME/.config/sketchybar/plugins/youtube-music.sh
 
 # Load config
 sketchybar --reload && aerospace reload-config
