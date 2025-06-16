@@ -207,7 +207,7 @@ up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
 
 [workspace-to-monitor-force-assignment]
-C = ['^omen by hp 35$', '^built-in retina display$']
+C = ['^lg full hd$', '^omen by hp 35$', '^built-in retina display$']
 1 = ['^omen by hp 35$', '^built-in retina display$']
 2 = ['^omen by hp 35$', '^built-in retina display$']
 N = ['^omen by hp 35$', '^built-in retina display$']
