@@ -11,3 +11,4 @@ stow
 uv
 yarn
 th-ch/youtube-music/youtube-music
+ruff
