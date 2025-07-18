@@ -57,7 +57,7 @@ automatically-unhide-macos-hidden-apps = false
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'code'
-run = 'move-node-to-workspace C'
+run = 'move-node-to-workspace V'
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'slack'
@@ -156,7 +156,7 @@ ctrl-3 = 'workspace 3'
 ctrl-4 = 'workspace 4'
 ctrl-5 = 'workspace 5'
 ctrl-6 = 'workspace 6'
-ctrl-c = 'workspace C'
+ctrl-v = 'workspace V'
 ctrl-s = 'workspace S'
 ctrl-n = 'workspace N'
 ctrl-m = 'workspace M'
@@ -169,7 +169,7 @@ ctrl-shift-3 = 'move-node-to-workspace 3'
 ctrl-shift-4 = 'move-node-to-workspace 4'
 ctrl-shift-5 = 'move-node-to-workspace 5'
 ctrl-shift-6 = 'move-node-to-workspace 6'
-ctrl-shift-c = 'move-node-to-workspace C'
+ctrl-shift-v = 'move-node-to-workspace V'
 ctrl-shift-s = 'move-node-to-workspace S'
 ctrl-shift-n = 'move-node-to-workspace N'
 ctrl-shift-m = 'move-node-to-workspace M'
@@ -207,7 +207,7 @@ up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
 
 [workspace-to-monitor-force-assignment]
-C = ['^lg full hd$', '^omen by hp 35$', '^built-in retina display$']
+V = ['^lg full hd$', '^omen by hp 35$', '^built-in retina display$']
 1 = ['^omen by hp 35$', '^built-in retina display$']
 2 = ['^omen by hp 35$', '^built-in retina display$']
 N = ['^omen by hp 35$', '^built-in retina display$']
