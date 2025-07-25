@@ -79,6 +79,10 @@ run = 'move-node-to-workspace Y'
 if.app-name-regex-substring = 'teams'
 run = 'move-node-to-workspace T'
 
+[[on-window-detected]]
+if.app-name-regex-substring = 'gather'
+run = 'move-node-to-workspace G'
+
 # Possible values: (qwerty|dvorak|colemak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
@@ -166,6 +170,7 @@ ctrl-n = 'workspace N'
 ctrl-m = 'workspace M'
 ctrl-y = 'workspace Y'
 ctrl-t = 'workspace T'
+ctrl-g = 'workspace G'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 ctrl-shift-1 = 'move-node-to-workspace 1'
@@ -180,6 +185,7 @@ ctrl-shift-n = 'move-node-to-workspace N'
 ctrl-shift-m = 'move-node-to-workspace M'
 ctrl-shift-y = 'move-node-to-workspace Y'
 ctrl-shift-t = 'move-node-to-workspace T'
+ctrl-shift-g = 'move-node-to-workspace G'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -217,6 +223,7 @@ V = ['^lg full hd$', '^omen by hp 35$', '^built-in retina display$']
 1 = ['^omen by hp 35$', '^built-in retina display$']
 2 = ['^omen by hp 35$', '^built-in retina display$']
 N = ['^omen by hp 35$', '^built-in retina display$']
+G = ['^omen by hp 35$', '^built-in retina display$']
 3 = ['^g27q-20$', '^arzopa$', '^built-in retina display$']
 4 = ['^g27q-20$', '^arzopa$', '^lg full hd$', '^built-in retina display$']
 S = ['^g27q-20$', '^arzopa$', '^lg full hd$', '^built-in retina display$']

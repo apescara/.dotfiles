@@ -424,6 +424,9 @@ function icon_map() {
   "WhatsApp")
     icon_result=":whats_app:"
     ;;
+  "Gather")
+    icon_result=":skype:"
+    ;;
   *)
     icon_result=":default:"
     ;;
