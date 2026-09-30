@@ -3,7 +3,7 @@
 bar=(
     height=36
     blur_radius=30
-    position=top
+    position=bottom
     sticky=on
     padding_left=10
     padding_right=10
